@@ -1,0 +1,154 @@
+@font-face {
+  font-family: 'MullerBold';
+  src: url('fonts/MullerBold.eot');
+  src: url('fonts/MullerBold.eot') format('embedded-opentype'), url('fonts/MullerBold.woff2') format('woff2'), url('fonts/MullerBold.woff') format('woff'), url('fonts/MullerBold.ttf') format('truetype'), url('fonts/MullerBold.svg#MullerBold') format('svg');
+}
+@font-face {
+  font-family: 'MullerLight';
+  src: url('fonts/MullerLight.eot');
+  src: url('fonts/MullerLight.eot') format('embedded-opentype'), url('fonts/MullerLight.woff2') format('woff2'), url('fonts/MullerLight.woff') format('woff'), url('fonts/MullerLight.ttf') format('truetype'), url('fonts/MullerLight.svg#MullerLight') format('svg');
+}
+@font-face {
+  font-family: 'MullerRegular';
+  src: url('fonts/MullerRegular.eot');
+  src: url('fonts/MullerRegular.eot') format('embedded-opentype'), url('fonts/MullerRegular.woff2') format('woff2'), url('fonts/MullerRegular.woff') format('woff'), url('fonts/MullerRegular.ttf') format('truetype'), url('fonts/MullerRegular.svg#MullerRegular') format('svg');
+}
+.muller-b {
+  font-family: 'MullerBold', sans-serif;
+}
+.muller-l {
+  font-family: 'MullerLight', sans-serif;
+}
+.muller-r {
+  font-family: 'MullerRegular', sans-serif;
+}
+/* --------------Base settings--------------- */
+* {
+  -webkit-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
+}
+body {
+  font-size: 16px;
+  font-family: 'MullerRegular', sans-serif;
+  color: #000000;
+}
+input:focus,
+button:focus,
+textarea:focus {
+  outline: none;
+}
+.slick-dots {
+  width: auto;
+  bottom: 4px;
+  right: 24%;
+}
+.slick-dots li {
+  width: 10px;
+}
+.slick-dots li button {
+  width: 5px;
+  height: 5px;
+  padding: 3px;
+  border: 2px solid #ffffff;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+}
+.slick-dots li button:before {
+  content: '';
+}
+.slick-dots li button:hover {
+  border: 2px solid #1b75bb;
+}
+.slick-dots li.slick-active button {
+  background-color: #1b75bb;
+  border: 2px solid #1b75bb;
+}
+/* ---------Main section------------ */
+#hdr {
+  padding-top: 1%;
+  padding-bottom: 1%;
+  background-color: #000000;
+}
+#hdr .logo-img {
+  padding: 0;
+}
+#hdr .logo-img a {
+  display: inline-block;
+  line-height: 45px;
+}
+#hdr .logo-text {
+  padding: 0;
+  padding-top: 10px;
+}
+#hdr .logo-text p {
+  color: #ffffff;
+  font-size: 16px;
+}
+#hdr .logo-contacts p {
+  font-size: 14px;
+  color: #767676;
+}
+#hdr .logo-contacts p .tel {
+  font-family: 'MullerBold', sans-serif;
+  color: #ffffff;
+  font-size: 25px;
+}
+#hdr .logo-contacts p a {
+  border-bottom: 1px solid #1b75bb;
+}
+#hdr .logo-contacts p a:hover {
+  text-decoration: none;
+  color: #ffffff;
+  border-bottom: 1px solid #ffffff;
+}
+#main .main-slider {
+  position: relative;
+}
+#main .main-text {
+  position: absolute;
+  top: 20%;
+  left: 20%;
+}
+#main .main-text h1 {
+  font-family: 'MullerBold', sans-serif;
+  font-size: 36px;
+  color: #ffffff;
+}
+#main .main-text p {
+  font-family: 'MullerLight', sans-serif;
+  font-size: 22px;
+  color: #ffffff;
+  line-height: 23px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+#main .main-text button {
+  text-transform: uppercase;
+  padding: 15px 60px;
+  border: 3px solid #1b75bb;
+  background-color: transparent;
+  font-family: 'MullerBold', sans-serif;
+  font-size: 18px;
+  color: #ffffff;
+}
+#main .main-text button:hover {
+  background-color: #1b75bb;
+}
+#after-main .re-position {
+  position: relative;
+  display: inline-block;
+}
+#after-main .a-position {
+  position: absolute;
+  display: inline-block;
+  top: 32%;
+  left: 8%;
+}
+#after-main p {
+  display: inline-block;
+  vertical-align: middle;
+}
