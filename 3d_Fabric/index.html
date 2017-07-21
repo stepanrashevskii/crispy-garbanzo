@@ -8,8 +8,10 @@
 
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
     <link rel="stylesheet" href="slick/slick-theme.css">
     <link rel="stylesheet" href="slick/slick.css">
+    <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="css/style.css">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -54,7 +56,7 @@
 					<h1>ПОДАРОК ДЛЯ ТЕХ,<br>КОМУ ХОЧЕТСЯ ЧЕГО-ТО<br>ОСОБЕННОГО!</h1>
 					<p>Креативный,оригинальный и<br>100% индивидуальный подарок<br> 
 						в одном клике от вас</p>
-					<button type="button">Оставить заявку</button>
+					<button class="form-button" type="submit">Оставить заявку</button>
 				</div>
 			</div>
 		</div>
@@ -63,20 +65,20 @@
 	<section id="after-main">
 		<div class="container">
 			<div class="row">
-				<div class="col-md-4">
+				<div class="col-md-4 wow fadeInDown" data-wow-delay=".5s">
 					<img class="img-responsive re-position" src="img/figure.png" alt="Фигура">
 					<img class="img-responsive a-position" src="img/smile.png" alt="Smile">
-					<p>Хотите<br>подарить море<br>позитива?</p>
+					<p>Хотите<br><span class="bold">подарить море</span><br>позитива?</p>
 				</div>
-				<div class="col-md-4">
+				<div class="col-md-4 wow fadeInDown" data-wow-delay="1s">
 					<img class="img-responsive re-position" src="img/figure.png" alt="Фигура">
 					<img class="img-responsive a-position" src="img/thumb.png" alt="Thumb">
-					<p>Нужно произвести<br>головокружительное<br>впечатление?</p>
+					<p>Нужно произвести<br><span class="bold">головокружительное</span><br>впечатление?</p>
 				</div>
-				<div class="col-md-4">
+				<div class="col-md-4 wow fadeInDown" data-wow-delay="1.5s">
 					<img class="img-responsive re-position" src="img/figure.png" alt="Фигура">
 					<img class="img-responsive a-position" src="img/heart.png" alt="Heart">
-					<p>Не знаете, чем<br>удивить своих<br>любимых?</p>
+					<p>Не знаете, чем<br><span class="bold">удивить своих</span><br>любимых?</p>
 				</div>
 			</div>
 		</div>
@@ -84,37 +86,199 @@
 
 	<section id="perfect-occasion">
 		<div class="container">
-			<div class="row"></div>
+			<div class="row section-header text-center">
+				<div class="col-xs-12">
+					<i class="fa fa-star-o"></i>
+					<h3>ИДЕАЛЬНЫЙ ПОВОД ПОДАРИТЬ 3D-ФИГУРКУ</h3>
+					<p>Свадьба, день рождение, корпоратив, рождение ребенка, Love Story, юбилей</p>
+				</div>
+			</div>
+			<div class="row insta-plagin text-center">
+				<div class="col-xs-12">
+					<img src="img/insta-plagin.jpg" alt="Instagram" class="img-responsive">
+				</div>
+			</div>
 		</div>
 	</section>
 
 	<section id="gift-for-life">
 		<div class="container">
-			<div class="row"></div>
+			<div class="row section-header text-center">
+				<div class="col-xs-12">
+					<i class="fa fa-gift"></i>
+					<h3>СДЕЛАЙТЕ ПОДАРОК НА ВСЮ ЖИЗНЬ!</h3>
+					<p>Оставьте заявку на разработку 3D фигурки прямо сейчас.</p>
+				</div>
+			</div>
+			<div class="col-xs-12 top-form text-center">
+				<form action="#">
+					<input type="text" name="name" id="top-form-name" required placeholder="ВВЕДИТЕ ИМЯ">
+					<input class="top-form-tel" type="tel" name="tel" id="top-form-tel" required placeholder="ВВЕДИТЕ ТЕЛЕФОН">
+					<button class="form-button" type="submit">ОСТАВИТЬ ЗАЯВКУ</button>
+				</form>
+			</div>
 		</div>
 	</section>
 
 	<section id="how-we-do">
 		<div class="container">
-			<div class="row"></div>
+			<div class="row section-header text-center">
+				<i class="fa fa-cog"></i>
+				<h3>КАК МЫ СОЗДАЕМ 3D-ФИГУРКИ</h3>
+				<p>Процесс изготовления 3D фигурки</p>
+			</div>
+			<div class="row steps">
+				<img class="img-responsive steps-line" src="img/line.png" alt="Линия">
+				<div class="col md-12 steps-block">
+					<div class="row">
+						<div class="col-md-6 wow fadeInLeft" data-wow-delay=".8s">
+							<img class="img-responsive steps-fotos" src="img/survey.png" alt="Съемка">
+						</div>
+						<div class="col-md-6 steps-block-text wow fadeInRight" data-wow-delay=".8s">
+							<p class="step">ШАГ 1</p>
+							<h4>Сбор фотографий</h4>
+							<p class="steps-descr">Для создания 3D модели, мы делаем большое количество снимков человека с разных сторон с помощью современного сертифицированного оборудования. Сам процесс 3D съёмки занимает не более 3-7 минут.</p>
+						</div>
+					</div>
+				</div>
+				<div class="col md-12 steps-block">
+					<div class="row">
+						<div class="col-md-6 steps-block-right steps-block-text wow fadeInLeft" data-wow-delay="1.3s">
+							<p class="step">ШАГ 2</p>
+							<h4>Создание 3D модели</h4>
+							<p class="steps-descr">Наш художник создает 3D модель на основе фотографий, наносит цвета и текстуры. Вы сможете ознакомиться с будущей фигуркой на этом этапе и внести корректировки, что позволит избежать неожиданных сюрпризов.</p>
+						</div>
+						<div class="col-md-6 wow fadeInRight" data-wow-delay="1.3s">
+							<img class="img-responsive steps-fotos" src="img/mockup.png" alt="3D">
+						</div>
+					</div>
+				</div>
+				<div class="col md-12 steps-block">
+					<div class="row">
+						<div class="col-md-6 wow fadeInLeft" data-wow-delay="1.8s">
+							<img class="img-responsive steps-fotos" src="img/printer.png" alt="Принтер">
+						</div>
+						<div class="col-md-6 steps-block-text wow fadeInRight" data-wow-delay="1.8s">
+							<p class="step">ШАГ 3</p>
+							<h4>Печать фигурки на 3D принтере</h4>
+							<p class="steps-descr">Утвержденная модель отправляется на печать в промышленный 3D принтер. Гипсовый порошок послойно закрепляется и печатающие головки наносят до 390 000 цветов. 
+							<br>
+							<br>
+							Через несколько часов печати и обработки ваша 3D фигурка готова!</p>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
 	</section>
 
-	<section id="costs">
+	<section id="prices">
 		<div class="container">
-			<div class="row"></div>
+			<div class="row section-header text-center">
+				<i class="fa fa-tags"></i>
+				<h3>Размеры и цены</h3>
+				<p>Чем больше размер фигурки, тем более детализированной она получается</p>
+			</div>
+			<div class="row prices text-center">
+				<div class="col-md-4 prices-most-smallet">
+					<img class="img-responsive most-smallet" src="img/man.png" alt="Пример">
+					<p class="prices-size">10СМ</p>
+					<p class="prices-price">3500 РУБ.</p>
+					<button type="button" class="prices-request">ОСТАВИТЬ ЗАЯВКУ</button>
+				</div>
+				<div class="col-md-4 prices-small">
+					<img class="img-responsive small" src="img/man.png" alt="Пример">
+					<p class="prices-size">15СМ</p>
+					<p class="prices-price">4000 РУБ.</p>
+					<button type="button" class="prices-request">ОСТАВИТЬ ЗАЯВКУ</button>
+				</div>
+				<div class="col-md-4 prices-normal">
+					<img class="img-responsive" src="img/man.png" alt="Пример">
+					<p class="prices-size">20СМ</p>
+					<p class="prices-price">4500 РУБ.</p>
+					<button type="button" class="prices-request">ОСТАВИТЬ ЗАЯВКУ</button>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="certificate">
+		<div class="container">
+			<div class="row certificate">
+				<div class="col-sm-6 wow bounceInDown" data-wow-delay="1s">
+					<h4>Подарочный сертификат!</h4>
+					<p>Это уникальный вариант 3 в 1! Новый интересный опыт, много положительных эмоций и, конечно, прекрасная 3д фигурка. Такой подарок точно не оставит никого равнодушным. Ведь иметь в своем портфолио не только фотографии, но и уменьшенную 3D копию себя просто здорово</p>
+					<button type="button" class="form-button certificate-request">ЗАКАЗАТЬ СЕРТИФИКАТ</button>
+				</div>
+				<div class="col-sm-6 wow bounceIn" data-wow-delay="3s">
+					<img class="img-responsive" src="img/certificate.png" alt="Сертификаты">
+				</div>
+			</div>
 		</div>
 	</section>
 
 	<section id="reasons">
 		<div class="container">
-			<div class="row"></div>
+			<div class="row section-header text-center">
+				<i class="fa fa-heart-o"></i>
+				<h3>6 ПРИЧИН</h3>
+				<p>почему за 3D-фигурками приходят именно к нам</p>
+			</div>
+			<div class="row reasons text-center">
+				<div class="row reasons-blocks">
+					<div class="col-md-4 reasons-blocks-block wow shake" data-wow-delay="3s">
+						<img src="img/medal.png" alt="Медаль" class="img-responsive">
+						<h4>Высокое качество</h4>
+						<p>Соблюдаем все технологические процессы. Вы получите абсолютную копию человека. Схожесть до 97%.</p>
+					</div>
+					<div class="col-md-4 reasons-blocks-block wow shake" data-wow-delay="1s">
+						<img src="img/clock.png" alt="Часы" class="img-responsive">
+						<h4>Сжатые сроки</h4>
+						<p>С момента сканирования у нас в студии, фигурка изготавливается 7 рабочих дней.</p>
+					</div>
+					<div class="col-md-4 reasons-blocks-block wow shake" data-wow-delay="4s">
+						<img src="img/commerce.png" alt="Доставка" class="img-responsive">
+						<h4>Бесплатная доставка</h4>
+						<p>Доставку по Санкт-Петербургу в пределах КАД осуществляем БЕСПЛАТНО.</p>
+					</div>
+				</div>
+				<div class="row reasons-blocks">
+					<div class="col-md-4 reasons-blocks-block wow shake" data-wow-delay="5s">
+						<img src="img/printer-icon.png" alt="Принтер" class="img-responsive">
+						<h4>Профессиональное оборудование</h4>
+						<p>Все наши фигурки печатаются на современном профессиональном оборудование общей стоимостью более 3 000 000 рублей.</p>
+					</div>
+					<div class="col-md-4 reasons-blocks-block wow shake" data-wow-delay="6s">
+						<img src="img/3d.png" alt="3D" class="img-responsive">
+						<h4>Цифровой двойник</h4>
+						<p>Создадим Вашу компьютерную 3D модель. Которая останется с вами даже если с фигуркой что то случится.</p>
+					</div>
+					<div class="col-md-4 reasons-blocks-block wow shake" data-wow-delay="2s">
+						<img src="img/cup.png" alt="Чашка" class="img-responsive">
+						<h4>Теплая и душевная атмосфера</h4>
+						<p>Угостим кофе, накормим печеньками и с удовольствием поддержим непренужденную беседу. С нами Вам будет комфортно.</p>
+					</div>
+				</div>
+			</div>
 		</div>
 	</section>
 
 	<section id="save">
 		<div class="container">
-			<div class="row"></div>
+			<div class="row section-header text-center">
+				<div class="col-xs-12">
+					<i class="fa fa-gift"></i>
+					<h3>СОХРАНИТЕ ЯРКИЕ МОМЕНТЫ ВАШЕЙ ЖИЗНИ В 3D</h3>
+					<p>Оставьте заявку на разработку 3D фигурки прямо сейчас.</p>
+				</div>
+			</div>
+			<div class="col-xs-12 top-form text-center">
+				<form action="#">
+					<input type="text" name="name" id="top-form-name" required placeholder="ВВЕДИТЕ ИМЯ">
+					<input class="top-form-tel" type="tel" name="tel" id="top-form-tel" required placeholder="ВВЕДИТЕ ТЕЛЕФОН">
+					<button class="form-button" type="submit">ОСТАВИТЬ ЗАЯВКУ</button>
+				</form>
+			</div>
 		</div>
 	</section>
 
@@ -134,13 +298,17 @@
 
 
 	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="js/jquery-3.2.1.min.js"></script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <!-- <script src="js/jquery-3.2.1.min.js"></script> -->
+
+
+     <script src="js/bootstrap.min.js"></script>
 	
 	<script src="slick/slick.min.js"></script>
 
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/bootstrap.min.js"></script>
-
+	<script src="js/wow.min.js"></script>
+	<!-- <script src="js/jquery.data-parallax.min.js"></script> -->
     <script>
     	$(document).ready(function(){
 		  $('.main-slider').slick({
@@ -149,5 +317,11 @@
 		  });
 		});
     </script>
+
+    <script>
+    	new WOW().init();
+    </script>
+
+    
 </body>
 </html>

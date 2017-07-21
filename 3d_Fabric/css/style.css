@@ -1,17 +1,17 @@
 @font-face {
   font-family: 'MullerBold';
-  src: url('fonts/MullerBold.eot');
-  src: url('fonts/MullerBold.eot') format('embedded-opentype'), url('fonts/MullerBold.woff2') format('woff2'), url('fonts/MullerBold.woff') format('woff'), url('fonts/MullerBold.ttf') format('truetype'), url('fonts/MullerBold.svg#MullerBold') format('svg');
+  src: url('../fonts/MullerBold.eot');
+  src: url('../fonts/MullerBold.eot') format('embedded-opentype'), url('../fonts/MullerBold.woff2') format('woff2'), url('../fonts/MullerBold.woff') format('woff'), url('../fonts/MullerBold.ttf') format('truetype'), url('../fonts/MullerBold.svg#MullerBold') format('svg');
 }
 @font-face {
   font-family: 'MullerLight';
-  src: url('fonts/MullerLight.eot');
-  src: url('fonts/MullerLight.eot') format('embedded-opentype'), url('fonts/MullerLight.woff2') format('woff2'), url('fonts/MullerLight.woff') format('woff'), url('fonts/MullerLight.ttf') format('truetype'), url('fonts/MullerLight.svg#MullerLight') format('svg');
+  src: url('../fonts/MullerLight.eot');
+  src: url('../fonts/MullerLight.eot') format('embedded-opentype'), url('../fonts/MullerLight.woff2') format('woff2'), url('../fonts/MullerLight.woff') format('woff'), url('../fonts/MullerLight.ttf') format('truetype'), url('../fonts/MullerLight.svg#MullerLight') format('svg');
 }
 @font-face {
   font-family: 'MullerRegular';
-  src: url('fonts/MullerRegular.eot');
-  src: url('fonts/MullerRegular.eot') format('embedded-opentype'), url('fonts/MullerRegular.woff2') format('woff2'), url('fonts/MullerRegular.woff') format('woff'), url('fonts/MullerRegular.ttf') format('truetype'), url('fonts/MullerRegular.svg#MullerRegular') format('svg');
+  src: url('../fonts/MullerRegular.eot');
+  src: url('../fonts/MullerRegular.eot') format('embedded-opentype'), url('../fonts/MullerRegular.woff2') format('woff2'), url('../fonts/MullerRegular.woff') format('woff'), url('../fonts/MullerRegular.ttf') format('truetype'), url('../fonts/MullerRegular.svg#MullerRegular') format('svg');
 }
 .muller-b {
   font-family: 'MullerBold', sans-serif;
@@ -23,7 +23,8 @@
   font-family: 'MullerRegular', sans-serif;
 }
 /* --------------Base settings--------------- */
-* {
+a,
+button {
   -webkit-transition: all 0.2s;
   -o-transition: all 0.2s;
   transition: all 0.2s;
@@ -67,10 +68,43 @@ textarea:focus {
   background-color: #1b75bb;
   border: 2px solid #1b75bb;
 }
+.section-header {
+  padding-top: 5%;
+  padding-bottom: 5%;
+}
+.section-header .fa {
+  color: #1b75bb;
+  font-size: 32px;
+}
+.section-header h3 {
+  text-transform: uppercase;
+  font-family: 'MullerBold', sans-serif;
+  font-size: 34px;
+}
+.section-header p {
+  font-family: 'MullerLight', sans-serif;
+  font-size: 20px;
+}
+.form-button {
+  text-transform: uppercase;
+  padding: 15px 60px;
+  border: 3px solid #1b75bb;
+  background-color: transparent;
+  font-family: 'MullerBold', sans-serif;
+  font-size: 18px;
+  color: #ffffff;
+}
+.form-button:hover {
+  background-color: #1b75bb;
+}
+.parallax-window {
+  min-height: 400px;
+  background: transparent;
+}
 /* ---------Main section------------ */
 #hdr {
-  padding-top: 1%;
-  padding-bottom: 1%;
+  padding-top: 15px;
+  padding-bottom: 15px;
   background-color: #000000;
 }
 #hdr .logo-img {
@@ -106,12 +140,17 @@ textarea:focus {
   border-bottom: 1px solid #ffffff;
 }
 #main .main-slider {
+  margin-bottom: 0;
   position: relative;
+}
+#main .main-slider div {
+  outline: none;
 }
 #main .main-text {
   position: absolute;
-  top: 20%;
-  left: 20%;
+  width: auto;
+  top: 150px;
+  left: 110px;
 }
 #main .main-text h1 {
   font-family: 'MullerBold', sans-serif;
@@ -126,21 +165,16 @@ textarea:focus {
   padding-top: 15px;
   padding-bottom: 15px;
 }
-#main .main-text button {
-  text-transform: uppercase;
-  padding: 15px 60px;
-  border: 3px solid #1b75bb;
-  background-color: transparent;
-  font-family: 'MullerBold', sans-serif;
-  font-size: 18px;
-  color: #ffffff;
-}
-#main .main-text button:hover {
-  background-color: #1b75bb;
+#after-main {
+  background-color: #f6f8fb;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  line-height: 18px;
 }
 #after-main .re-position {
   position: relative;
   display: inline-block;
+  line-height: 18px;
 }
 #after-main .a-position {
   position: absolute;
@@ -149,6 +183,239 @@ textarea:focus {
   left: 8%;
 }
 #after-main p {
+  margin-bottom: 0;
   display: inline-block;
   vertical-align: middle;
+  text-transform: uppercase;
+  padding-left: 20px;
+  font-size: 14px;
+}
+#after-main p .bold {
+  font-weight: 700;
+}
+/* ----------THE PERFECT BEING OF THE 3D-FIGURE--------- */
+#perfect-occasion {
+  padding-bottom: 60px;
+}
+#perfect-occasion .insta-plagin img {
+  margin: 0 auto;
+}
+/* ----------A gift for life---------------------------- */
+#gift-for-life,
+#save {
+  padding-bottom: 90px;
+  background: url(../img/parallax-1.jpg) center center no-repeat;
+}
+#gift-for-life .section-header h3,
+#save .section-header h3 {
+  color: #ffffff;
+}
+#gift-for-life .section-header p,
+#save .section-header p {
+  color: #ffffff;
+}
+#gift-for-life .top-form form,
+#save .top-form form {
+  border: 1px solid #f6f8fb;
+  width: 70%;
+  margin: 0 auto;
+  padding-top: 55px;
+  padding-bottom: 55px;
+}
+#gift-for-life .top-form form input,
+#save .top-form form input {
+  padding: 15px 60px;
+  display: inline-block;
+}
+#gift-for-life .top-form form input::-webkit-input-placeholder,
+#save .top-form form input::-webkit-input-placeholder {
+  font-family: 'MullerLight', sans-serif;
+  font-size: 14px;
+  text-align: center;
+}
+#gift-for-life .top-form form input::-moz-placeholder,
+#save .top-form form input::-moz-placeholder {
+  font-family: 'MullerLight', sans-serif;
+  font-size: 14px;
+  text-align: center;
+}
+#gift-for-life .top-form form input:-moz-placeholder,
+#save .top-form form input:-moz-placeholder {
+  font-family: 'MullerLight', sans-serif;
+  font-size: 14px;
+  text-align: center;
+}
+#gift-for-life .top-form form input:-ms-input-placeholder,
+#save .top-form form input:-ms-input-placeholder {
+  font-family: 'MullerLight', sans-serif;
+  font-size: 14px;
+  text-align: center;
+}
+#gift-for-life .top-form form .top-form-tel,
+#save .top-form form .top-form-tel {
+  margin-left: 10px;
+}
+#gift-for-life .top-form form button,
+#save .top-form form button {
+  position: absolute;
+  top: 83%;
+  left: 37%;
+  background-color: #1b75bb;
+  border: none;
+}
+#gift-for-life .top-form form button:hover,
+#save .top-form form button:hover {
+  box-shadow: 0 5px 20px 4px rgba(0, 0, 0, 0.5);
+}
+/* ----------How we do this----------------------------- */
+#how-we-do {
+  padding-bottom: 50px;
+}
+#how-we-do .steps {
+  position: relative;
+}
+#how-we-do .steps-line {
+  position: absolute;
+  top: 25px;
+  left: 50%;
+  margin: 0;
+}
+#how-we-do .steps-block {
+  padding-top: 17px;
+  padding-bottom: 17px;
+}
+#how-we-do .steps-block-right {
+  text-align: right;
+}
+#how-we-do .steps-block-text {
+  padding-left: 80px;
+  padding-right: 80px;
+}
+#how-we-do .steps-fotos {
+  margin: 0 auto;
+  margin-top: 45px;
+}
+#how-we-do .steps .step {
+  font-family: 'MullerLight', sans-serif;
+  font-size: 14px;
+  color: #1b75bb;
+}
+#how-we-do .steps h4 {
+  text-transform: uppercase;
+  font-family: 'MullerBold', sans-serif;
+  font-size: 20px;
+  padding-bottom: 20px;
+}
+#how-we-do .steps .steps-descr {
+  font-family: 'MullerLight', sans-serif;
+  font-size: 18px;
+}
+/* ----------Sizes and prices--------------------------- */
+#prices {
+  position: relative;
+  background-color: #f6f8fb;
+  padding-bottom: 650px;
+}
+#prices .prices div {
+  position: absolute;
+}
+#prices .prices .prices-most-smallet {
+  bottom: 100px;
+  left: 8%;
+}
+#prices .prices .prices-small {
+  bottom: 100px;
+  left: 34%;
+  /* -webkit-transform: translateX(-237px);
+			-ms-transform: translateX(-237px);
+			-o-transform: translateX(-237px);
+			transform: translateX(-237px); */
+}
+#prices .prices .prices-normal {
+  bottom: 100px;
+  right: 8%;
+}
+#prices .prices img {
+  margin: 0 auto;
+}
+#prices .prices .most-smallet {
+  width: 120px;
+  vertical-align: bottom;
+}
+#prices .prices .small {
+  width: 140px;
+}
+#prices .prices .prices-size {
+  padding-top: 15px;
+}
+#prices .prices .prices-price {
+  font-family: 'MullerBold', sans-serif;
+  font-size: 28px;
+  padding-bottom: 15px;
+}
+#prices .prices .prices-request {
+  padding: 10px 20px;
+  background-color: transparent;
+  color: #1b75bb;
+  border: 3px solid #1b75bb;
+  font-family: 'MullerBold', sans-serif;
+  font-size: 14px;
+}
+#prices .prices .prices-request:hover {
+  background-color: #1b75bb;
+  color: #ffffff;
+}
+/* ----------Certificate-------------------------------- */
+#certificate {
+  background-color: #e7f1fc;
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+#certificate .certificate h4 {
+  font-family: 'MullerBold', sans-serif;
+  font-size: 34px;
+  text-transform: uppercase;
+}
+#certificate .certificate p {
+  font-family: 'MullerLight', sans-serif;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  padding-right: 35px;
+}
+#certificate .certificate-request {
+  background-color: #1b75bb;
+}
+#certificate .certificate-request:hover {
+  background-color: transparent;
+  color: #1b75bb;
+}
+#certificate .certificate img {
+  margin: 0 auto;
+}
+/* ----------Reasons------------------------------------ */
+#reasons {
+  padding-bottom: 60px;
+}
+#reasons .reasons-blocks {
+  margin-top: 40px;
+}
+#reasons .reasons-blocks-block {
+  padding-left: 60px;
+  padding-right: 60px;
+}
+#reasons .reasons-blocks-block img {
+  margin: 0 auto;
+  margin-bottom: 25px;
+}
+#reasons .reasons-blocks-block h4 {
+  font-family: 'MullerBold', sans-serif;
+  text-transform: uppercase;
+}
+#reasons .reasons-blocks-block p {
+  font-family: 'MullerLight', sans-serif;
+  font-size: 14px;
+}
+/* ----------Save Moments------------------------------- */
+#save {
+  background: url(../img/parallax-2.jpg) center center no-repeat;
 }

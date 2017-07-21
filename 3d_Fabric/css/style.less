@@ -1,29 +1,29 @@
 @font-face {
     font-family: 'MullerBold';
-    src: url('fonts/MullerBold.eot');
-    src: url('fonts/MullerBold.eot') format('embedded-opentype'),
-         url('fonts/MullerBold.woff2') format('woff2'),
-         url('fonts/MullerBold.woff') format('woff'),
-         url('fonts/MullerBold.ttf') format('truetype'),
-         url('fonts/MullerBold.svg#MullerBold') format('svg');
+    src: url('../fonts/MullerBold.eot');
+    src: url('../fonts/MullerBold.eot') format('embedded-opentype'),
+         url('../fonts/MullerBold.woff2') format('woff2'),
+         url('../fonts/MullerBold.woff') format('woff'),
+         url('../fonts/MullerBold.ttf') format('truetype'),
+         url('../fonts/MullerBold.svg#MullerBold') format('svg');
 }
 @font-face {
     font-family: 'MullerLight';
-    src: url('fonts/MullerLight.eot');
-    src: url('fonts/MullerLight.eot') format('embedded-opentype'),
-         url('fonts/MullerLight.woff2') format('woff2'),
-         url('fonts/MullerLight.woff') format('woff'),
-         url('fonts/MullerLight.ttf') format('truetype'),
-         url('fonts/MullerLight.svg#MullerLight') format('svg');
+    src: url('../fonts/MullerLight.eot');
+    src: url('../fonts/MullerLight.eot') format('embedded-opentype'),
+         url('../fonts/MullerLight.woff2') format('woff2'),
+         url('../fonts/MullerLight.woff') format('woff'),
+         url('../fonts/MullerLight.ttf') format('truetype'),
+         url('../fonts/MullerLight.svg#MullerLight') format('svg');
 }
 @font-face {
     font-family: 'MullerRegular';
-    src: url('fonts/MullerRegular.eot');
-    src: url('fonts/MullerRegular.eot') format('embedded-opentype'),
-         url('fonts/MullerRegular.woff2') format('woff2'),
-         url('fonts/MullerRegular.woff') format('woff'),
-         url('fonts/MullerRegular.ttf') format('truetype'),
-         url('fonts/MullerRegular.svg#MullerRegular') format('svg');
+    src: url('../fonts/MullerRegular.eot');
+    src: url('../fonts/MullerRegular.eot') format('embedded-opentype'),
+         url('../fonts/MullerRegular.woff2') format('woff2'),
+         url('../fonts/MullerRegular.woff') format('woff'),
+         url('../fonts/MullerRegular.ttf') format('truetype'),
+         url('../fonts/MullerRegular.svg#MullerRegular') format('svg');
 }
 .muller-b  {
 	font-family: 'MullerBold', sans-serif;
@@ -41,14 +41,10 @@
 @white: #fff;
 
 /* --------------Base settings--------------- */
-* {
+a, button {
 	-webkit-transition: all 0.2s;
 	-o-transition: all 0.2s;
 	transition: all 0.2s;
-}
-.container {
-	// width: 960px;
-	// min-width: 960px;
 }
 body {
 	font-size: 16px;
@@ -89,10 +85,43 @@ input, button, textarea {
 	background-color: @blue;
 	border: 2px solid @blue;
 }
+.section-header {
+	padding-top: 5%;
+	padding-bottom: 5%;
+	.fa {
+		color: @blue;
+		font-size: 32px;
+	}
+	h3 {
+		text-transform: uppercase;
+		.muller-b;
+		font-size: 34px;
+	}
+	p {
+		.muller-l;
+		font-size: 20px;
+	}
+}
+.form-button {
+	text-transform: uppercase;
+	padding: 15px 60px;
+	border: 3px solid @blue;
+	background-color: transparent;
+	.muller-b;
+	font-size: 18px;
+	color: @white;
+	&:hover {
+		background-color: @blue;
+	}
+}
+.parallax-window {
+    min-height: 400px;
+    background: transparent;
+}
 /* ---------Main section------------ */
 #hdr {
-	padding-top: 1%;
-	padding-bottom: 1%;
+	padding-top: 15px;
+	padding-bottom: 15px;
 	background-color: @black;
 	.logo {
 		&-img {
@@ -103,7 +132,6 @@ input, button, textarea {
 			}
 		}
 		&-text {
-			// margin-left: 5%;
 			padding: 0;
 			padding-top: 10px;
 			p {
@@ -136,12 +164,17 @@ input, button, textarea {
 #main {
 	.main {
 		&-slider {
+			margin-bottom: 0;
 			position: relative;
+			div {
+				outline: none;
+			}
 		}
 		&-text {
 			position: absolute;
-			top: 20%;
-			left: 20%;
+			width: auto;
+			top: 150px;
+			left: 110px;
 			h1 {
 				.muller-b;
 				font-size: 36px;
@@ -155,26 +188,19 @@ input, button, textarea {
 				padding-top: 15px;
 				padding-bottom: 15px;
 			}
-			button {
-				text-transform: uppercase;
-				padding: 15px 60px;
-				border: 3px solid @blue;
-				background-color: transparent;
-				.muller-b;
-				font-size: 18px;
-				color: @white;
-				&:hover {
-					background-color: @blue;
-				}
-			}
 		}
 	}
 }
 
 #after-main {
+	background-color: @grey;
+	padding-top: 30px;
+	padding-bottom: 30px;
+	line-height: 18px;
 	.re-position {
 		position: relative;
 		display: inline-block;
+		line-height: 18px;
 	}
 	.a-position {
 		position: absolute;
@@ -183,7 +209,242 @@ input, button, textarea {
 		left: 8%;
 	}
 	p {
+		margin-bottom: 0;
 		display: inline-block;
 		vertical-align: middle;
+		text-transform: uppercase;
+		padding-left: 20px;
+		font-size: 14px;
+		.bold {
+			font-weight: 700;
+		}
 	}
+}
+
+/* ----------THE PERFECT BEING OF THE 3D-FIGURE--------- */
+#perfect-occasion {
+	padding-bottom: 60px;
+	.insta-plagin {
+		img {
+			margin: 0 auto;
+			
+		}
+	}
+}
+/* ----------A gift for life---------------------------- */
+#gift-for-life, #save {
+	padding-bottom: 90px;
+	background: url(../img/parallax-1.jpg) center center no-repeat;
+	.section-header {
+		h3 {
+			color: @white;
+		}
+		p {
+			color: @white;
+		}
+	}
+	.top-form {
+		form {
+			border: 1px solid @grey;
+			width: 70%;
+			margin: 0 auto;
+			padding-top: 55px;
+			padding-bottom: 55px;
+			input {
+				padding: 15px 60px;
+				display: inline-block;
+				&::-webkit-input-placeholder {
+					.muller-l;
+					font-size: 14px;
+					text-align: center;
+				}
+				&::-moz-placeholder {
+					.muller-l;
+					font-size: 14px;
+					text-align: center;
+				}
+				&:-moz-placeholder {
+					.muller-l;
+					font-size: 14px;
+					text-align: center;
+				}
+				&:-ms-input-placeholder {
+					.muller-l;
+					font-size: 14px;
+					text-align: center;
+				}
+			}
+			.top-form-tel {
+				margin-left: 10px;
+			}
+			button {
+				position: absolute;
+				top: 83%;
+				left: 37%;
+				background-color: @blue;
+				border: none;
+				&:hover {
+					box-shadow: 0 5px 20px 4px rgba(0,0,0,.5);
+				}
+			}
+		}
+	}
+}
+/* ----------How we do this----------------------------- */
+#how-we-do {
+	padding-bottom: 50px;
+	.steps {
+		position: relative;
+		&-line {
+			position: absolute;
+			top: 25px;
+			left: 50%;
+			margin: 0;
+		}
+		&-block {
+			padding-top: 17px;
+			padding-bottom: 17px;
+			&-right {
+				text-align: right;
+			}
+			&-text {
+				padding-left: 80px;
+				padding-right: 80px;
+			}
+		}
+		&-fotos	{
+			margin: 0 auto;
+			margin-top: 45px;
+		}
+		.step {
+			.muller-l;
+			font-size: 14px;
+			color: @blue;
+		}
+		h4 {
+			text-transform: uppercase;
+			.muller-b;
+			font-size: 20px;
+			padding-bottom: 20px;
+		}
+		.steps-descr {
+			.muller-l;
+			font-size: 18px;
+		}
+	}
+}
+/* ----------Sizes and prices--------------------------- */
+#prices {
+	position: relative;
+	background-color: @grey;
+	padding-bottom: 650px;
+	.prices {
+		div {
+			position: absolute;
+		}
+		.prices-most-smallet {
+			bottom: 100px;
+			left: 8%;
+		}
+		.prices-small {
+			bottom: 100px;
+			left: 34%;
+			/* -webkit-transform: translateX(-237px);
+			-ms-transform: translateX(-237px);
+			-o-transform: translateX(-237px);
+			transform: translateX(-237px); */
+		}
+		.prices-normal {
+			bottom: 100px;
+			right: 8%;
+		}
+		img {
+			margin: 0 auto;
+		}
+		.most-smallet {
+			width: 120px;
+			vertical-align: bottom;
+		}
+		.small {
+			width: 140px;
+		}
+		.prices-size {
+			padding-top: 15px;
+		}
+		.prices-price {
+			.muller-b;
+			font-size: 28px;
+			padding-bottom: 15px;
+		}
+		.prices-request {
+			padding: 10px 20px;
+			background-color: transparent;
+			color: @blue;
+			border: 3px solid @blue;
+			.muller-b;
+			font-size: 14px;
+			&:hover {
+				background-color: @blue;
+				color: @white;
+			}
+		}
+	}
+}
+/* ----------Certificate-------------------------------- */
+#certificate {
+	background-color: @light-blue;
+	padding-top: 70px;
+	padding-bottom: 70px;
+	.certificate {
+		h4 {
+			.muller-b;
+			font-size: 34px;
+			text-transform: uppercase;
+		}
+		p {
+			.muller-l;
+			margin-top: 40px;
+			margin-bottom: 40px;
+			padding-right: 35px;
+		}
+		&-request {
+			background-color: @blue;
+			&:hover {
+				background-color: transparent;
+				color: @blue;
+			}
+		}
+		img {
+			margin: 0 auto;
+		}
+	}
+}
+/* ----------Reasons------------------------------------ */
+#reasons {
+	padding-bottom: 60px;
+	.reasons {
+		&-blocks {
+			margin-top: 40px;
+			&-block {
+				padding-left: 60px;
+				padding-right: 60px;
+				img {
+					margin: 0 auto;
+					margin-bottom: 25px;
+				}
+				h4 {
+					.muller-b;
+					text-transform: uppercase;
+				}
+				p {
+					.muller-l;
+					font-size: 14px;
+				}
+			}
+		}
+	}
+}
+/* ----------Save Moments------------------------------- */
+#save {
+	background: url(../img/parallax-2.jpg) center center no-repeat;
 }
