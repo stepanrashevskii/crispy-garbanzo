@@ -32,7 +32,7 @@
 					<p>Изготовление сувенирных <br>3D-фигурок в Санкт-Петербурге</p>
 				</div>
 				<div class="col-lg-4 col-md-4 logo-contacts">
-					<p><span class="tel">8 (812) 932-39-12</span><br> или <a href="#">закажите обратный звонок</a></p>
+					<p><span class="tel">8 (812) 932-39-12</span><br> или <a href="#" data-toggle="modal" data-target="#modal-call">закажите обратный звонок</a></p>
 				</div>
 			</div>
 		</div>
@@ -56,7 +56,7 @@
 					<h1>ПОДАРОК ДЛЯ ТЕХ,<br>КОМУ ХОЧЕТСЯ ЧЕГО-ТО<br>ОСОБЕННОГО!</h1>
 					<p>Креативный,оригинальный и<br>100% индивидуальный подарок<br> 
 						в одном клике от вас</p>
-					<button class="form-button" type="submit">Оставить заявку</button>
+					<button class="form-button" data-toggle="modal" data-target="#modal-request">Оставить заявку</button>
 				</div>
 			</div>
 		</div>
@@ -88,15 +88,19 @@
 		<div class="container">
 			<div class="row section-header text-center">
 				<div class="col-xs-12">
-					<i class="fa fa-star-o"></i>
+					<img src="img/star.png" alt="Звезда">
 					<h3>ИДЕАЛЬНЫЙ ПОВОД ПОДАРИТЬ 3D-ФИГУРКУ</h3>
 					<p>Свадьба, день рождение, корпоратив, рождение ребенка, Love Story, юбилей</p>
 				</div>
 			</div>
 			<div class="row insta-plagin text-center">
-				<div class="col-xs-12">
+				
+				<!-- Горизонтальная ориентация -->
+				<iframe src='inwidget/index.php?width=800&inline=7&view=14&toolbar=false' scrolling='no' frameborder='no' style='border:none;width:800px;height:295px;overflow:hidden;'></iframe>
+
+				<!-- <div class="col-xs-12">
 					<img src="img/insta-plagin.jpg" alt="Instagram" class="img-responsive">
-				</div>
+				</div> -->
 			</div>
 		</div>
 	</section>
@@ -105,15 +109,16 @@
 		<div class="container">
 			<div class="row section-header text-center">
 				<div class="col-xs-12">
-					<i class="fa fa-gift"></i>
+					<img src="img/gift.png" alt="Подарок">
 					<h3>СДЕЛАЙТЕ ПОДАРОК НА ВСЮ ЖИЗНЬ!</h3>
 					<p>Оставьте заявку на разработку 3D фигурки прямо сейчас.</p>
 				</div>
 			</div>
 			<div class="col-xs-12 top-form text-center">
-				<form action="#">
-					<input type="text" name="name" id="top-form-name" required placeholder="ВВЕДИТЕ ИМЯ">
-					<input class="top-form-tel" type="tel" name="tel" id="top-form-tel" required placeholder="ВВЕДИТЕ ТЕЛЕФОН">
+				<form id="ajax-gift-for-life">
+					<input type="hidden" name="whatever" value="Заявка на сканирование">
+					<input type="text" name="name" required placeholder="ВВЕДИТЕ ИМЯ">
+					<input class="top-form-tel" type="tel" name="telephone" required placeholder="ВВЕДИТЕ ТЕЛЕФОН">
 					<button class="form-button" type="submit">ОСТАВИТЬ ЗАЯВКУ</button>
 				</form>
 			</div>
@@ -123,7 +128,7 @@
 	<section id="how-we-do">
 		<div class="container">
 			<div class="row section-header text-center">
-				<i class="fa fa-cog"></i>
+				<img src="img/gear.png" alt="Шестеренка">
 				<h3>КАК МЫ СОЗДАЕМ 3D-ФИГУРКИ</h3>
 				<p>Процесс изготовления 3D фигурки</p>
 			</div>
@@ -175,7 +180,7 @@
 	<section id="prices">
 		<div class="container">
 			<div class="row section-header text-center">
-				<i class="fa fa-tags"></i>
+				<img src="img/price.png" alt="Бирка">
 				<h3>Размеры и цены</h3>
 				<p>Чем больше размер фигурки, тем более детализированной она получается</p>
 			</div>
@@ -184,19 +189,19 @@
 					<img class="img-responsive most-smallet" src="img/man.png" alt="Пример">
 					<p class="prices-size">10СМ</p>
 					<p class="prices-price">3500 РУБ.</p>
-					<button type="button" class="prices-request">ОСТАВИТЬ ЗАЯВКУ</button>
+					<button data-toggle="modal" data-target="#modal-request" class="prices-request">ОСТАВИТЬ ЗАЯВКУ</button>
 				</div>
 				<div class="col-md-4 prices-small">
 					<img class="img-responsive small" src="img/man.png" alt="Пример">
 					<p class="prices-size">15СМ</p>
 					<p class="prices-price">4000 РУБ.</p>
-					<button type="button" class="prices-request">ОСТАВИТЬ ЗАЯВКУ</button>
+					<button data-toggle="modal" data-target="#modal-request" class="prices-request">ОСТАВИТЬ ЗАЯВКУ</button>
 				</div>
 				<div class="col-md-4 prices-normal">
 					<img class="img-responsive" src="img/man.png" alt="Пример">
 					<p class="prices-size">20СМ</p>
 					<p class="prices-price">4500 РУБ.</p>
-					<button type="button" class="prices-request">ОСТАВИТЬ ЗАЯВКУ</button>
+					<button data-toggle="modal" data-target="#modal-request" class="prices-request">ОСТАВИТЬ ЗАЯВКУ</button>
 				</div>
 			</div>
 		</div>
@@ -208,7 +213,7 @@
 				<div class="col-sm-6 wow bounceInDown" data-wow-delay="1s">
 					<h4>Подарочный сертификат!</h4>
 					<p>Это уникальный вариант 3 в 1! Новый интересный опыт, много положительных эмоций и, конечно, прекрасная 3д фигурка. Такой подарок точно не оставит никого равнодушным. Ведь иметь в своем портфолио не только фотографии, но и уменьшенную 3D копию себя просто здорово</p>
-					<button type="button" class="form-button certificate-request">ЗАКАЗАТЬ СЕРТИФИКАТ</button>
+					<button data-toggle="modal" data-target="#modal-call" class="form-button certificate-request">ЗАКАЗАТЬ СЕРТИФИКАТ</button>
 				</div>
 				<div class="col-sm-6 wow bounceIn" data-wow-delay="3s">
 					<img class="img-responsive" src="img/certificate.png" alt="Сертификаты">
@@ -220,7 +225,7 @@
 	<section id="reasons">
 		<div class="container">
 			<div class="row section-header text-center">
-				<i class="fa fa-heart-o"></i>
+				<img src="img/heart-icon.png" alt="Сердце">
 				<h3>6 ПРИЧИН</h3>
 				<p>почему за 3D-фигурками приходят именно к нам</p>
 			</div>
@@ -267,15 +272,16 @@
 		<div class="container">
 			<div class="row section-header text-center">
 				<div class="col-xs-12">
-					<i class="fa fa-gift"></i>
+					<img src="img/gift.png" alt="Подарок">
 					<h3>СОХРАНИТЕ ЯРКИЕ МОМЕНТЫ ВАШЕЙ ЖИЗНИ В 3D</h3>
 					<p>Оставьте заявку на разработку 3D фигурки прямо сейчас.</p>
 				</div>
 			</div>
 			<div class="col-xs-12 top-form text-center">
-				<form action="#">
-					<input type="text" name="name" id="top-form-name" required placeholder="ВВЕДИТЕ ИМЯ">
-					<input class="top-form-tel" type="tel" name="tel" id="top-form-tel" required placeholder="ВВЕДИТЕ ТЕЛЕФОН">
+				<form id="ajax-save-moment">
+					<input type="hidden" name="whatever" value="Заявка на сканирование">
+					<input type="text" name="name" required placeholder="ВВЕДИТЕ ИМЯ">
+					<input class="top-form-tel" type="tel" name="telephone" required placeholder="ВВЕДИТЕ ТЕЛЕФОН">
 					<button class="form-button" type="submit">ОСТАВИТЬ ЗАЯВКУ</button>
 				</form>
 			</div>
@@ -284,17 +290,215 @@
 
 	<section id="feedback">
 		<div class="container">
-			<div class="row"></div>
+			<div class="row section-header text-center">
+				<img src="img/feedbadk.png" alt="Отзывы">
+				<h3>РЕАЛЬНЫЕ ОТЗЫВЫ</h3>
+				<p>наших клиентов</p>
+			</div>
+			<div class="row comments">
+				<div class="col-md-6">
+					<div class="row comments-block">
+						<div class="col-xs-12 each-block">
+							<div class="row block">
+								<div class="col-xs-3">
+									<img src="img/avatar-1.jpg" alt="Ававтар" class="img-responsive avatar">
+								</div>
+								<div class="col-xs-9">
+									<p class="comments-block-name">Имя Фамилия</p>
+									<p class="comments-block-descr">Узнала о фигурках случайно через знакомго. Повонила в студию мне все рассказали и я решилась сделать такой подарок своей либомой мамочке на день рождения. </p>
+								</div>
+							</div>
+						</div>
+						<div class="col-xs-12 each-block">
+							<div class="row block">
+								<div class="col-xs-3">
+									<img src="img/avatar-2.jpg" alt="Ававтар" class="img-responsive avatar">
+								</div>
+								<div class="col-xs-9">
+									<p class="comments-block-name">Имя Фамилия</p>
+									<p class="comments-block-descr">Я владелец интернет-магазина по продаже дизайнерских платьев. В первую очередь заинтересовало создание цифровых моделей платьев...для выставления на витрине магазина. Поскольку это очень оригинально и нет аналогов. Плюс ребята убедили сделать свою маленькую копию в довесок. Я доволен.  </p>
+								</div>
+							</div>
+						</div>
+						<div class="col-xs-12 each-block">
+							<div class="row block">
+								<div class="col-xs-3">
+									<img src="img/avatar-2.jpg" alt="Ававтар" class="img-responsive avatar">
+								</div>
+								<div class="col-xs-9">
+									<p class="comments-block-name">Имя Фамилия</p>
+									<p class="comments-block-descr">Приходил в студию на мероприятие (день открытия, киносеанс) и увидел там фигурку...захотел такую же себе.</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-xs-12 each-block">
+							<div class="row block">
+								<div class="col-xs-3">
+									<img src="img/avatar-2.jpg" alt="Ававтар" class="img-responsive avatar">
+								</div>
+								<div class="col-xs-9">
+									<p class="comments-block-name">Имя Фамилия</p>
+									<p class="comments-block-descr">Искал студию, которая сможет сделать фигурку моего персонажа из игры. Наткнулся на проект майлофт22 позвонил. Ребята сказали, что это реально только необходима 3D модель персонажа. Благо в самой игре эта модель уже есть. Поэтому с этим не возникло проблем. Фигурку сделали быстро. Причем ехать никуда не пришлось, все сделали удаленно. Друг остался доволен. На мой взгляд очень классный подарок для игроманов и коллекционеров. Планирую заказать еще. Даешь 3D в массы =)  </p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="row comments-block">
+						<div class="col-xs-12 each-block">
+							<div class="row block">
+								<div class="col-xs-3">
+									<img src="img/avatar-4.jpg" alt="Ававтар" class="img-responsive avatar">
+								</div>
+								<div class="col-xs-9">
+									<p class="comments-block-name">Имя Фамилия</p>
+									<p class="comments-block-descr">Наткнулся на рекламу в интренете. Заинтриговало объявление. Зашел на сайт и заказал любимой в подарок. Получился очень классный и необычный сюрприз.  </p>
+								</div>
+							</div>
+						</div>
+						<div class="col-xs-12 each-block">
+							<div class="row block">
+								<div class="col-xs-3">
+									<img src="img/avatar-3.jpg" alt="Ававтар" class="img-responsive avatar">
+								</div>
+								<div class="col-xs-9">
+									<p class="comments-block-name">Имя Фамилия</p>
+									<p class="comments-block-descr">Долго искали вариант подарка для нашего начальника. Сложно найти подарок для того человека у которого все уже есть. Но от этого подарка он был в восторге. Теперь наш подарок стоит у него в кабинете на видном месте и когда приходят клиенты они удивляются. В ближайшем будущим планируем сделать всю нашу команду в 3D =)  </p>
+								</div>
+							</div>
+						</div>
+						<div class="col-xs-12 each-block">
+							<div class="row block">
+								<div class="col-xs-3">
+									<img src="img/avatar-3.jpg" alt="Ававтар" class="img-responsive avatar">
+								</div>
+								<div class="col-xs-9">
+									<p class="comments-block-name">Имя Фамилия</p>
+									<p class="comments-block-descr">Решили увековечить читу Макухиных на долгую память.</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-xs-12 each-block">
+							<div class="row block padding-bottom">
+								<div class="col-xs-3">
+									<img src="img/avatar-3.jpg" alt="Ававтар" class="img-responsive avatar">
+								</div>
+								<div class="col-xs-9">
+									<p class="comments-block-name">Имя Фамилия</p>
+									<p class="comments-block-descr">Являемся партнерами ребят. У нас небольшой магазин по продаже цветов. Решили расширить линейку своих товаров. Потому что в наше время одними цветами уже не удивишь. Все хотят чего то особенного. О результатах пока говорить рано, но заинтересованность у клиентов уже видна. Каждый второй интересуется этой услугой.  </p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
 	</section>
 
 	<section id="contacts">
 		<div class="container">
-			<div class="row"></div>
+			<div class="row section-header text-center">
+				<img src="img/pointer.png" alt="Указатель">
+				<h3>НАШИ КОНТАКТЫ</h3>
+			</div>
+			<div class="row contacts">
+				<div class="col-md-3">
+					<img class="pointer" src="img/pointer.png" alt="Указатель">
+					<p>г. Санкт-Петербург<br>Ул. Тамбовская д.75А </p>
+				</div>
+				<div class="col-md-3">
+					<img class="phone" src="img/phone.png" alt="Телефон">
+					<p class="call">8 (812) 932-39-12</p>
+					<br>
+					<a class="callback" href="#" data-toggle="modal" data-target="#modal-call">Вам перезвонить?</a>
+				</div>
+				<div class="col-md-3">
+					<img src="img/dog.png" alt="Собачка">
+					<p>info@myloft22.ru</p>
+					<br>
+					<a class="callback" href="mailto:info@myloft22.ru">напишите нам</a>
+				</div>
+				<div class="col-md-3">
+					<a href="https://vk.com"><img class="vk" src="img/vk.png" alt="VK"></a>
+				</div>
+			</div>
 		</div>
 	</section>
 
-	<footer id="foo"></footer>
+	<section id="map">
+		<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A3700694bd5411ca2a46f0eb54bcc782143994476334f39006db5dc1c4ed77596&amp;width=100%25&amp;height=400&amp;lang=ru_RU&amp;scroll=false"></script>
+	</section>
+
+	<footer id="foo">
+		<div class="container">
+			<div class="row logo">
+				<div class="col-lg-4 col-md-4 logo-img">
+					<a href="#main"><img src="img/logo.png" alt="Логотип"></a>
+				</div>
+				<div class="col-lg-4 col-md-4 logo-text">
+					<p>Изготовление сувенирных <br>3D-фигурок в Санкт-Петербурге</p>
+				</div>
+				<div class="col-lg-4 col-md-4 logo-contacts">
+					<p><span class="tel">8 (812) 932-39-12</span><br> или <a href="#" data-toggle="modal" data-target="#modal-call">закажите обратный звонок</a></p>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+
+	<!-- Modal Call -->
+	<div class="modal fade" id="modal-call" tabindex="-1" role="dialog">
+	  <div class="modal-dialog" role="document">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	        <h4 class="modal-title">Закажите звонок<br> нашего консультанта</h4>
+	      </div>
+	      <div class="modal-body">
+	        <form class="modal-form" id="modal-call-ajax">
+	        	<input type="hidden" name="whatever" value="Заказан звонок">
+	        	<input type="text" name="name" required placeholder="ВАШЕ ИМЯ">
+	        	<input type="tel" name="telephone" required placeholder="ВАШ ТЕЛЕФОН">
+	        	<button type="submit" id="send-form" class="form-button modal-form-button">Заказать звонок</button>
+	        </form>
+	      </div>
+	    </div><!-- /.modal-content -->
+	  </div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->
+
+	<!-- Modal Request -->
+	<div class="modal fade" id="modal-request" tabindex="-1" role="dialog">
+	  <div class="modal-dialog" role="document">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	        <h4 class="modal-title">Оставьте заявку<br> на 3d сканирование</h4>
+	      </div>
+	      <div class="modal-body">
+	        <form class="modal-form" id="modal-request-ajax">
+	        	<input type="hidden" name="whatever" value="Заявка на сканирование">
+	        	<input type="text" name="name" required placeholder="ВАШЕ ИМЯ">
+	        	<input type="tel" name="telephone" required placeholder="ВАШ ТЕЛЕФОН">
+	        	<button type="submit" id="send-form" class="form-button modal-form-button">оставить заявку</button>
+	        </form>
+	      </div>
+	    </div><!-- /.modal-content -->
+	  </div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->
+
+	<!-- Modal thanks -->
+	<div class="modal fade" id="modal-thanks" tabindex="-1" role="dialog">
+	  <div class="modal-dialog" role="document">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	        <h4 class="modal-title">Спасибо за вашу заявку!</h4>
+	        <p class="text-center">Наш менеджер свяжется<br>с Вами в ближайшее время.</p>
+	      </div>
+	    </div><!-- /.modal-content -->
+	  </div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->
 
 
 	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
@@ -320,6 +524,76 @@
 
     <script>
     	new WOW().init();
+    </script>
+
+    <!-- Отправка формы с модального окна -->
+	<script>
+      $(document).ready(function() {
+        $("#modal-call-ajax").submit(function() {
+          $.ajax({
+            type: "POST",
+            url: "send-modal.php",
+            data: $(this).serialize()
+          }).done(function() {
+          $(this).find("input").val("");
+          $("#modal-thanks").modal("show");
+          $("#modal-call-ajax").trigger("reset");
+          $("#modal-call").modal("hide");
+            });
+        	return false;
+        });
+      });
+    </script>
+    <script>
+      $(document).ready(function() {
+        $("#modal-request-ajax").submit(function() {
+          $.ajax({
+            type: "POST",
+            url: "send-modal.php",
+            data: $(this).serialize()
+          }).done(function() {
+          $(this).find("input").val("");
+          $("#modal-thanks").modal("show");
+          $("#modal-request-ajax").trigger("reset");
+          $("#modal-request").modal("hide");
+            });
+        	return false;
+        });
+      });
+    </script>
+
+	<!-- Отправка форма со страницы -->
+	<script>
+      $(document).ready(function() {
+        $("#ajax-gift-for-life").submit(function() {
+          $.ajax({
+            type: "POST",
+            url: "send-modal.php",
+            data: $(this).serialize()
+          }).done(function() {
+          $(this).find("input").val("");
+          $("#modal-thanks").modal("show");
+          $("#ajax-gift-for-life").trigger("reset");
+            });
+        	return false;
+        });
+      });
+    </script>
+    <script>
+      $(document).ready(function() {
+        $("#ajax-save-moment").submit(function() {
+          $.ajax({
+            type: "POST",
+            url: "send-modal.php",
+            data: $(this).serialize()
+          }).done(function() {
+          $(this).find("input").val("");
+          $("#modal-thanks").modal("show");
+          $("#ajax-save-moment").trigger("reset");
+            });
+        	return false;
+        });
+      });
     </script>
 
     

@@ -50,11 +50,17 @@ body {
 	font-size: 16px;
 	.muller-r;
 	color: @black;
+	overflow-y: scroll !important;
+	padding-right: 0 !important;
 }
-input, button, textarea {
+a, input, button, textarea {
 	&:focus {
 		outline: none;
 	}
+}
+a:focus {
+	text-decoration: none;
+	color: @blue;
 }
 .slick-dots {
 	width: auto;
@@ -88,9 +94,9 @@ input, button, textarea {
 .section-header {
 	padding-top: 5%;
 	padding-bottom: 5%;
-	.fa {
-		color: @blue;
-		font-size: 32px;
+	img {
+		width: 40px;
+		margin-bottom: 15px;
 	}
 	h3 {
 		text-transform: uppercase;
@@ -119,7 +125,7 @@ input, button, textarea {
     background: transparent;
 }
 /* ---------Main section------------ */
-#hdr {
+#hdr, #foo {
 	padding-top: 15px;
 	padding-bottom: 15px;
 	background-color: @black;
@@ -174,7 +180,11 @@ input, button, textarea {
 			position: absolute;
 			width: auto;
 			top: 150px;
-			left: 110px;
+			left: 50%;
+			-webkit-transform: translateX(-600px);
+			-ms-transform: translateX(-600px);
+			-o-transform: translateX(-600px);
+			transform: translateX(-600px);
 			h1 {
 				.muller-b;
 				font-size: 36px;
@@ -349,10 +359,6 @@ input, button, textarea {
 		.prices-small {
 			bottom: 100px;
 			left: 34%;
-			/* -webkit-transform: translateX(-237px);
-			-ms-transform: translateX(-237px);
-			-o-transform: translateX(-237px);
-			transform: translateX(-237px); */
 		}
 		.prices-normal {
 			bottom: 100px;
@@ -447,4 +453,145 @@ input, button, textarea {
 /* ----------Save Moments------------------------------- */
 #save {
 	background: url(../img/parallax-2.jpg) center center no-repeat;
+}
+/* ----------Feedback----------------------------------- */
+#feedback {
+	background-color: @light-blue;
+	padding-bottom: 80px;
+	.comments {
+		&-block {
+			padding-left: 15px;
+			padding-right: 15px;
+			.each-block {
+				margin-top: 15px;
+				margin-bottom: 15px;
+				.block {
+					background-color: @white;
+					padding: 15px;
+					vertical-align: middle;
+					border: 1px solid @grey;
+					.avatar {
+						-webkit-border-radius: 50%;
+						-moz-border-radius: 50%;
+						-ms-border-radius: 50%;
+						-o-border-radius: 50%;
+						border-radius: 50%;
+					}
+					.comments-block-name {
+						.muller-b;
+					}
+					.comments-block-descr {
+						.muller-l;
+						font-size: 13px;
+					}
+				}
+				div.padding-bottom {
+					padding-bottom: 86px;
+				}
+			}
+		}
+	}
+}
+/* ----------Contacts----------------------------------- */
+#contacts {
+	padding-bottom: 60px;
+	.contacts {
+		.address {
+			vertical-align: top;
+		}
+		img {
+			width: 15px;
+		}
+		.pointer {
+			vertical-align: top;
+		}
+		.phone {
+			vertical-align: text-top;
+		}
+		.vk {
+			width: 25px;
+			margin-top: 5px;
+		}
+		p {
+			display: inline-block;
+			margin-bottom: 0;
+			line-height: 16px;
+		}
+		.call {
+			.muller-b;
+		}
+		a {
+			.muller-r;
+			font-size: 14px;
+			color: @blue;
+			text-decoration: underline;
+		}
+		.callback {
+			margin-left: 35px;
+		}
+	}
+}
+/* ----------Modals----------------------------------- */
+.modal {
+	&-content {
+		padding-top: 40px;
+		padding-bottom: 40px;
+		width: 400px;
+		-webkit-border-radius: 0;
+		-moz-border-radius: 0;
+		-ms-border-radius: 0;
+		-o-border-radius: 0;
+		border-radius: 0;
+		.modal-header {
+			border-bottom: 0;
+			padding-top: 0;
+			.close {
+				padding-top: 5px;
+				margin-right: -70px;
+				margin-top: -38px;
+				font-size: 35px;
+				line-height: 35px;
+				border: 1px solid @white;
+				opacity: 1;
+				text-shadow: none;
+				color: @white;
+				.muller-l;
+				width: 40px;
+				height: 40px;
+				-webkit-border-radius: 50%;
+				-moz-border-radius: 50%;
+				-ms-border-radius: 50%;
+				-o-border-radius: 50%;
+				border-radius: 50%;
+			}
+			.modal-title {
+				.muller-r;
+				font-size: 22px;
+				text-transform: uppercase;
+				text-align: center;
+			}
+			p {
+				padding-top: 20px;
+				.muller-r;
+				font-size: 22px;
+			}
+		}
+		.modal-body {
+			.modal-form {
+				text-align: center;
+				input {
+					padding-top: 15px;
+					padding-bottom: 15px;
+					margin: 0 auto;
+					margin-bottom: 20px;
+					text-align: center;
+					width: 300px;
+					border: 2px solid rgb(209, 209, 209);
+				}
+				&-button {
+					background-color: @blue;
+				}
+			}
+		}
+	}
 }

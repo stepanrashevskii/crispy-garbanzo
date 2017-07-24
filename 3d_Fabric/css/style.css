@@ -33,11 +33,18 @@ body {
   font-size: 16px;
   font-family: 'MullerRegular', sans-serif;
   color: #000000;
+  overflow-y: scroll !important;
+  padding-right: 0 !important;
 }
+a:focus,
 input:focus,
 button:focus,
 textarea:focus {
   outline: none;
+}
+a:focus {
+  text-decoration: none;
+  color: #1b75bb;
 }
 .slick-dots {
   width: auto;
@@ -72,9 +79,9 @@ textarea:focus {
   padding-top: 5%;
   padding-bottom: 5%;
 }
-.section-header .fa {
-  color: #1b75bb;
-  font-size: 32px;
+.section-header img {
+  width: 40px;
+  margin-bottom: 15px;
 }
 .section-header h3 {
   text-transform: uppercase;
@@ -102,39 +109,48 @@ textarea:focus {
   background: transparent;
 }
 /* ---------Main section------------ */
-#hdr {
+#hdr,
+#foo {
   padding-top: 15px;
   padding-bottom: 15px;
   background-color: #000000;
 }
-#hdr .logo-img {
+#hdr .logo-img,
+#foo .logo-img {
   padding: 0;
 }
-#hdr .logo-img a {
+#hdr .logo-img a,
+#foo .logo-img a {
   display: inline-block;
   line-height: 45px;
 }
-#hdr .logo-text {
+#hdr .logo-text,
+#foo .logo-text {
   padding: 0;
   padding-top: 10px;
 }
-#hdr .logo-text p {
+#hdr .logo-text p,
+#foo .logo-text p {
   color: #ffffff;
   font-size: 16px;
 }
-#hdr .logo-contacts p {
+#hdr .logo-contacts p,
+#foo .logo-contacts p {
   font-size: 14px;
   color: #767676;
 }
-#hdr .logo-contacts p .tel {
+#hdr .logo-contacts p .tel,
+#foo .logo-contacts p .tel {
   font-family: 'MullerBold', sans-serif;
   color: #ffffff;
   font-size: 25px;
 }
-#hdr .logo-contacts p a {
+#hdr .logo-contacts p a,
+#foo .logo-contacts p a {
   border-bottom: 1px solid #1b75bb;
 }
-#hdr .logo-contacts p a:hover {
+#hdr .logo-contacts p a:hover,
+#foo .logo-contacts p a:hover {
   text-decoration: none;
   color: #ffffff;
   border-bottom: 1px solid #ffffff;
@@ -150,7 +166,11 @@ textarea:focus {
   position: absolute;
   width: auto;
   top: 150px;
-  left: 110px;
+  left: 50%;
+  -webkit-transform: translateX(-600px);
+  -ms-transform: translateX(-600px);
+  -o-transform: translateX(-600px);
+  transform: translateX(-600px);
 }
 #main .main-text h1 {
   font-family: 'MullerBold', sans-serif;
@@ -326,10 +346,6 @@ textarea:focus {
 #prices .prices .prices-small {
   bottom: 100px;
   left: 34%;
-  /* -webkit-transform: translateX(-237px);
-			-ms-transform: translateX(-237px);
-			-o-transform: translateX(-237px);
-			transform: translateX(-237px); */
 }
 #prices .prices .prices-normal {
   bottom: 100px;
@@ -418,4 +434,137 @@ textarea:focus {
 /* ----------Save Moments------------------------------- */
 #save {
   background: url(../img/parallax-2.jpg) center center no-repeat;
+}
+/* ----------Feedback----------------------------------- */
+#feedback {
+  background-color: #e7f1fc;
+  padding-bottom: 80px;
+}
+#feedback .comments-block {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+#feedback .comments-block .each-block {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+#feedback .comments-block .each-block .block {
+  background-color: #ffffff;
+  padding: 15px;
+  vertical-align: middle;
+  border: 1px solid #f6f8fb;
+}
+#feedback .comments-block .each-block .block .avatar {
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+}
+#feedback .comments-block .each-block .block .comments-block-name {
+  font-family: 'MullerBold', sans-serif;
+}
+#feedback .comments-block .each-block .block .comments-block-descr {
+  font-family: 'MullerLight', sans-serif;
+  font-size: 13px;
+}
+#feedback .comments-block .each-block div.padding-bottom {
+  padding-bottom: 86px;
+}
+/* ----------Contacts----------------------------------- */
+#contacts {
+  padding-bottom: 60px;
+}
+#contacts .contacts .address {
+  vertical-align: top;
+}
+#contacts .contacts img {
+  width: 15px;
+}
+#contacts .contacts .pointer {
+  vertical-align: top;
+}
+#contacts .contacts .phone {
+  vertical-align: text-top;
+}
+#contacts .contacts .vk {
+  width: 25px;
+  margin-top: 5px;
+}
+#contacts .contacts p {
+  display: inline-block;
+  margin-bottom: 0;
+  line-height: 16px;
+}
+#contacts .contacts .call {
+  font-family: 'MullerBold', sans-serif;
+}
+#contacts .contacts a {
+  font-family: 'MullerRegular', sans-serif;
+  font-size: 14px;
+  color: #1b75bb;
+  text-decoration: underline;
+}
+#contacts .contacts .callback {
+  margin-left: 35px;
+}
+/* ----------Modals----------------------------------- */
+.modal-content {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  width: 400px;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
+  border-radius: 0;
+}
+.modal-content .modal-header {
+  border-bottom: 0;
+  padding-top: 0;
+}
+.modal-content .modal-header .close {
+  padding-top: 5px;
+  margin-right: -70px;
+  margin-top: -38px;
+  font-size: 35px;
+  line-height: 35px;
+  border: 1px solid #ffffff;
+  opacity: 1;
+  text-shadow: none;
+  color: #ffffff;
+  font-family: 'MullerLight', sans-serif;
+  width: 40px;
+  height: 40px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+}
+.modal-content .modal-header .modal-title {
+  font-family: 'MullerRegular', sans-serif;
+  font-size: 22px;
+  text-transform: uppercase;
+  text-align: center;
+}
+.modal-content .modal-header p {
+  padding-top: 20px;
+  font-family: 'MullerRegular', sans-serif;
+  font-size: 22px;
+}
+.modal-content .modal-body .modal-form {
+  text-align: center;
+}
+.modal-content .modal-body .modal-form input {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  text-align: center;
+  width: 300px;
+  border: 2px solid #d1d1d1;
+}
+.modal-content .modal-body .modal-form-button {
+  background-color: #1b75bb;
 }
