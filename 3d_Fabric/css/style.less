@@ -120,10 +120,6 @@ a:focus {
 		background-color: @blue;
 	}
 }
-.parallax-window {
-    min-height: 400px;
-    background: transparent;
-}
 /* ---------Main section------------ */
 #hdr, #foo {
 	padding-top: 15px;
@@ -131,7 +127,7 @@ a:focus {
 	background-color: @black;
 	.logo {
 		&-img {
-			padding: 0;
+			padding-top: 20px;
 			a {
 				display: inline-block;
 				line-height: 45px;
@@ -171,32 +167,25 @@ a:focus {
 	.main {
 		&-slider {
 			margin-bottom: 0;
-			position: relative;
-			div {
+			&-block {
+				background: url(../img/main-bg.png) center center no-repeat;
+				background-size: cover;
 				outline: none;
-			}
-		}
-		&-text {
-			position: absolute;
-			width: auto;
-			top: 150px;
-			left: 50%;
-			-webkit-transform: translateX(-600px);
-			-ms-transform: translateX(-600px);
-			-o-transform: translateX(-600px);
-			transform: translateX(-600px);
-			h1 {
-				.muller-b;
-				font-size: 36px;
-				color: @white;
-			}
-			p {
-				.muller-l;
-				font-size: 22px;
-				color: @white;
-				line-height: 23px;
-				padding-top: 15px;
-				padding-bottom: 15px;
+				padding-top: 100px;
+				padding-bottom: 100px;
+				h1 {
+					.muller-b;
+					font-size: 36px;
+					color: @white;
+				}
+				p {
+					.muller-l;
+					font-size: 22px;
+					color: @white;
+					line-height: 23px;
+					padding-top: 15px;
+					padding-bottom: 15px;
+				}
 			}
 		}
 	}
@@ -215,8 +204,8 @@ a:focus {
 	.a-position {
 		position: absolute;
 		display: inline-block;
-		top: 32%;
-		left: 8%;
+		top: 20px;
+		left: 31px;
 	}
 	p {
 		margin-bottom: 0;
@@ -234,12 +223,6 @@ a:focus {
 /* ----------THE PERFECT BEING OF THE 3D-FIGURE--------- */
 #perfect-occasion {
 	padding-bottom: 60px;
-	.insta-plagin {
-		img {
-			margin: 0 auto;
-			
-		}
-	}
 }
 /* ----------A gift for life---------------------------- */
 #gift-for-life, #save {
@@ -290,7 +273,11 @@ a:focus {
 			button {
 				position: absolute;
 				top: 83%;
-				left: 37%;
+				left: 50%;
+				-webkit-transform: translateX(-150px);
+				-ms-transform: translateX(-150px);
+				-o-transform: translateX(-150px);
+				transform: translateX(-150px);
 				background-color: @blue;
 				border: none;
 				&:hover {
@@ -373,6 +360,9 @@ a:focus {
 		}
 		.small {
 			width: 140px;
+		}
+		.normal {
+			width: 160px;
 		}
 		.prices-size {
 			padding-top: 15px;
@@ -590,6 +580,432 @@ a:focus {
 				}
 				&-button {
 					background-color: @blue;
+				}
+			}
+		}
+	}
+}
+
+/* -------------Media--------------------------------- */
+@media (min-width: 0px) and (max-width: 480px) {
+	.section-header {
+		h3 {
+			font-size: 24px;
+		}
+		p {
+			font-size: 14px;
+		}
+	}
+	#hdr, #foo {
+		padding: 0;
+		.logo {
+			.logo-text {
+				p {
+					font-size: 14px;
+				}
+			}
+			.logo-contacts {
+				p {
+					.tel {
+						font-size: 16px;
+					}
+				}
+			}
+		}
+	}
+	#main {
+		.main {
+			&-slider {
+				&-block {
+					padding-top: 60px;
+					padding-bottom: 60px;
+					h1 {
+						font-size: 28px;
+					}
+					p{
+						font-size: 18px;
+					}
+					.form-button {
+						font-size: 16px;
+					}
+				}
+			}
+		}
+	}
+	#gift-for-life, #save {
+		.top-form {
+			form {
+				input {
+					padding: 15px 30px;
+					width: 90%;
+					display: block;
+					margin: 0 auto;
+					margin-bottom: 10px;
+				}
+				.top-form-tel {
+					margin: 0 auto;
+				}
+				button {
+					padding: 15px;
+					-webkit-transform: translateX(-67px);
+					-ms-transform: translateX(-67px);
+					-o-transform: translateX(-67px);
+					transform: translateX(-67px);
+					top: 90%;
+					font-size: 11px;
+				}
+			}
+		}
+	}
+	#how-we-do {
+		.steps {
+			.steps-line {
+				display: none;
+			}
+			&-block {
+				&-text {
+					padding-left: 0;
+					padding-right: 0;
+					.step {
+						margin-bottom: 0;
+					}
+					h4 {
+						font-size: 16px;
+						padding-bottom: 0;
+						margin-top: 0;
+						margin-bottom: 0;
+					}
+					p.steps-descr {
+						font-size: 14px;
+					}
+				}
+			}
+		}
+	}
+	#prices {
+		padding-bottom: 1750px;
+		.prices {
+			.prices-most-smallet {
+				width: 220px;
+				top: 180px;
+				left: 50%;
+				right: 0;
+				bottom: 0;
+				-webkit-transform: translateX(-110px);
+				-ms-transform: translateX(-110px);
+				-o-transform: translateX(-110px);
+				transform: translateX(-110px);
+				.prices-request {
+					width: 190px;
+					margin: 0 auto;
+				}
+			}
+			.prices-small {
+				width: 220px;
+				top: 700px;
+				left: 50%;
+				right: 0;
+				bottom: 0;
+				-webkit-transform: translateX(-110px);
+				-ms-transform: translateX(-110px);
+				-o-transform: translateX(-106px);
+				transform: translateX(-110px);
+				.prices-request {
+					width: 190px;
+					margin: 0 auto;
+				}
+			}
+			.prices-normal {
+				width: 220px;
+				top: 1300px;
+				left: 50%;
+				right: 0;
+				bottom: 0;
+				-webkit-transform: translateX(-110px);
+				-ms-transform: translateX(-110px);
+				-o-transform: translateX(-110px);
+				transform: translateX(-110px);
+				.prices-request {
+					width: 190px;
+					margin: 0 auto;
+				}
+			}
+			.prices-price {
+				font-size: 24px;
+			}
+		}
+	}
+	#reasons {
+		.reasons-blocks {
+			margin-left: 0;
+			margin-right: 0;
+		}
+	}
+	#contacts {
+		.contacts {
+			p {
+				font-size: 13px;
+			}
+			.call {
+				font-size: 13px;
+			}
+			.callback {
+				margin-left: 15px;
+			}
+		}
+	}
+}
+/* col-xs */
+@media (min-width: 481px) and (max-width: 767px) {
+	.section-header {
+		h3 {
+			font-size: 26px;
+		}
+		p {
+			font-size: 16px;
+		}
+	}
+	#hdr, #foo {
+		padding: 0;
+		.logo {
+			.logo-contacts {
+				p {
+					.tel {
+						font-size: 16px;
+					}
+					
+				}
+			}
+		}
+	}
+	#main {
+		.main {
+			&-slider {
+				&-block {
+					padding-top: 60px;
+					padding-bottom: 60px;
+					h1 {
+						font-size: 30px;
+					}
+					p{
+						font-size: 18px;
+					}
+				}
+			}
+		}
+	}
+	#after-main {
+		.re-position-center-1 {
+			padding-left: 15%;
+			/* -webkit-transform: translateX(-40px);
+			-ms-transform: translateX(-40px);
+			-o-transform: translateX(-40px);
+			transform: translateX(-40px); */
+		}
+		.re-position-center-2 {
+			padding-left: 30%;
+			/* -webkit-transform: translateX(-40px);
+			-ms-transform: translateX(-40px);
+			-o-transform: translateX(-40px);
+			transform: translateX(-40px); */
+		}
+		.re-position-center-3 {
+			padding-left: 45%;
+			/* -webkit-transform: translateX(-40px);
+			-ms-transform: translateX(-40px);
+			-o-transform: translateX(-40px);
+			transform: translateX(-40px); */
+		}
+	}
+	#gift-for-life, #save {
+		.top-form {
+			form {
+				width: 90%;
+				input {
+					display: block;
+					margin: 0 auto;
+					margin-bottom: 10px;
+				}
+				.top-form-tel {
+					margin: 0 auto;
+				}
+				button {
+					-webkit-transform: translateX(-106px);
+					-ms-transform: translateX(-106px);
+					-o-transform: translateX(-106px);
+					transform: translateX(-106px);
+					padding: 15px 30px;
+					top: 88%;
+					font-size: 16px;
+				}
+			}
+		}
+	}
+	#how-we-do {
+		.steps {
+			&-block {
+				&-text {
+					padding-left: 15px;
+					padding-right: 15px;
+					.step {
+						margin-bottom: 0;
+					}
+					h4 {
+						font-size: 16px;
+						padding-bottom: 0;
+						margin-top: 0;
+						margin-bottom: 0;
+					}
+					p.steps-descr {
+						font-size: 14px;
+					}
+				}
+			}
+		}
+	}
+	#prices {
+		padding-bottom: 1750px;
+		.prices {
+			.prices-most-smallet {
+				width: auto;
+				top: 180px;
+				left: 50%;
+				right: 0;
+				bottom: 0;
+				-webkit-transform: translateX(-152px);
+				-ms-transform: translateX(-152px);
+				-o-transform: translateX(-152px);
+				transform: translateX(-152px);
+			}
+			.prices-small {
+				width: auto;
+				top: 700px;
+				left: 50%;
+				right: 0;
+				bottom: 0;
+				-webkit-transform: translateX(-152px);
+				-ms-transform: translateX(-152px);
+				-o-transform: translateX(-152px);
+				transform: translateX(-152px);
+			}
+			.prices-normal {
+				width: auto;
+				top: 1300px;
+				left: 50%;
+				right: 0;
+				bottom: 0;
+				-webkit-transform: translateX(-152px);
+				-ms-transform: translateX(-152px);
+				-o-transform: translateX(-152px);
+				transform: translateX(-152px);
+			}
+		}
+	}
+	#reasons {
+		.reasons-blocks {
+			margin-left: 0;
+			margin-right: 0;
+		}
+	}
+}
+/* col-sm */
+@media (min-width: 768px) and (max-width: 991px) {
+	.section-header {
+		h3 {
+			font-size: 30px;
+		}
+	}
+	#hdr, #foo {
+		.logo {
+			.logo-text {
+				p {
+					font-size: 13px;
+				}
+			}
+			.logo-contacts {
+				p {
+				padding-top: 10px;
+					.tel {
+						font-size: 18px
+					}
+					a {
+						font-size: 14px;
+					}
+				}
+			}
+		}
+	}
+	#after-main {
+		.re-position-center-2 {
+			margin-left: 50%;
+			-webkit-transform: translateX(-40px);
+			-ms-transform: translateX(-40px);
+			-o-transform: translateX(-40px);
+			transform: translateX(-40px);
+		}
+	}
+	#gift-for-life, #save {
+		.top-form {
+			form {
+				input {
+					display: block;
+					margin: 0 auto;
+					margin-bottom: 10px;
+				}
+				.top-form-tel {
+					margin: 0 auto;
+				}
+				button {
+					top: 87%;
+				}
+			}
+		}
+	}
+	#how-we-do {
+		.steps {
+			&-block {
+				&-text {
+					padding-left: 45px;
+					padding-right: 45px;
+					h4 {
+						font-size: 18px;
+						padding-bottom: 0;
+					}
+					p.steps-descr {
+						font-size: 16px;
+					}
+				}
+			}
+		}
+	}
+	#certificate {
+		.certificate-request {
+			font-size: 17px;
+		}
+	}
+	#reasons {
+		.reasons-blocks {
+			margin-left: 0;
+			margin-right: 0;
+		}
+	}
+} 
+/* col-md */
+@media (min-width: 992px) and (max-width: 1199px) {
+	#feedback {
+		.comments-block {
+			.each-block {
+				.alignment {
+					padding-bottom: 0;
+					.comments-block-name {
+						margin-bottom: 7px;
+					}
+				}
+				.alignment-2 {
+					padding-bottom: 32px;
+				}
+				div.padding-bottom {
+					padding-bottom: 70px;
 				}
 			}
 		}
